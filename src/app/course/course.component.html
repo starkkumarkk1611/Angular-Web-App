@@ -1,0 +1,65 @@
+<nav>
+    <h2>All Tours Explorers</h2>
+    <button id="logout" (click)="logout()">LOGOUT</button>
+</nav>
+
+
+<!--
+<button type="button" (click)="cat='BEGINNER'" id="button1" >BEGINNER</button>
+<button type="button" (click)="cat='ADVANCED'" id="button2">ADVANCED</button>
+
+<select id="myid" [(ngModel)]="cat" class="form-control">
+    <option value="BEGINNER" >BEGINNER </option>  
+    <option value="ADVANCED" >ADVANCED</option>
+</select>
+
+-->
+
+<ul id="cat-op">
+    <li>
+        <input type='radio' [(ngModel)]="cat" value='BEGINNER' name='radio' id='radio1' checked />
+        <label for='radio1'>BEGINNER</label>
+    </li>
+    <li>
+        <input type='radio' [(ngModel)]="cat" value='ADVANCED' name='radio'  id='radio2'/>
+        <label for='radio2'>ADVANCED</label>
+    </li>
+</ul>
+
+<div class="d-flex justify-content-center">
+<div class="spinner-border" role="status">
+    <span class="sr-only" id="loading">Loading...</span>
+</div>
+</div>
+<section>
+<div class="tours" *ngFor="let e of tours | searchFilter:cat">
+    <h2>{{ e.description }}</h2>
+    <img [src]="e.iconUrl" alt="">
+    <p>{{ e.longDescription }}</p>
+    <div id=buttons>
+    <button [routerLink] ="['/course/' + e.id]">View Details</button>
+    <button [routerLink] ="['/course/edit/' + e.id]">Edit</button></div>
+</div>
+</section>
+<!--
+<table class="table" id='tab'>
+    <thead>
+    <tr>
+        <th scope="col">Description</th>
+        <th scope="col">Image</th>
+        <th scope="col">Couse List Icon</th>
+        <th scope="col">Long Description</th>
+        <th scope="col">Category</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let e of tours | searchFilter:cat">
+        <td>{{ e.description }}</td>
+        <td><img [src]="e.iconUrl" alt=""></td>
+        <td><img [src]="e.courseListIcon" ></td>
+        <td>{{ e.longDescription }}</td>
+        <td>{{ e.category }}</td>
+    </tr>
+    </tbody>
+</table>  -->

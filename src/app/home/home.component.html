@@ -1,0 +1,22 @@
+<div id="login-form" class="form-group">
+ 
+  
+    <form #f="ngForm" class = "form-control" (ngSubmit) = "onClickSubmit(f.value)">
+        <h1>LOG INTO YOUR ACCOUNT</h1>
+        <div id="email-input">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" name="email" placeholder="test@test.com" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,10}$" ngModel required>
+            <span *ngIf="f.form.controls.email?.valid"><i class="material-icons">check</i></span>
+            <span *ngIf="f.form.controls.email?.dirty && !f.form.controls.email?.valid"><i class="material-icons">clear</i></span>
+        </div>
+        <div id="password-input">
+            <label for="password ">Password</label>
+            <input type="password"  class="form-control" placeholder="Test6201@"  name="password" pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,20}$" ngModel  required>
+            <span *ngIf="!f.form.controls.password?.valid &&  f.form.controls.password?.dirty "><i class="material-icons">clear</i> <br> *Password should be at least 8 characters
+                long and should contain one number,one character and one special</span>
+        </div>
+        
+        <button type="submit" class="btn btn-primary" [disabled]="f.invalid">LOGIN</button>
+        
+    </form>   
+</div>

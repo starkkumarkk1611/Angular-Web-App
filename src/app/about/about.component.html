@@ -1,0 +1,33 @@
+<nav>
+    <h2>All Tours Explorers</h2>
+    <button (click)="logout()">LOGOUT</button>
+</nav>
+<div class="d-flex justify-content-center">
+    <div class="spinner-border" role="status">
+        <span class="sr-only" id="loading">Loading...</span>
+</div>
+</div>
+<section>
+<div id="tour">
+    <h2>{{ tour.description }}</h2>
+    <img [src]="tour.courseListIcon" alt="">
+    <p>{{ tour.longDescription }}</p>
+</div>
+
+<div id="location" >
+    <table>
+        <thead>
+            <td>#</td>
+            <td>Location</td>
+            <td>Day</td>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of tour.locations" >
+                <td  >{{e.sl}}</td>
+                <td>{{e.location}}</td>
+                <td>{{e.days}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</section>

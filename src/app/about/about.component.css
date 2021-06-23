@@ -1,0 +1,54 @@
+nav{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: lightblue;
+    width: 100%;
+    align-items: center;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#tour{
+    border: 2px solid pink;
+    display: flex;
+    flex-direction: column;
+    background-color: blanchedalmond;
+    align-items: center;
+    width: 60%;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+#tour img{
+    width: 100%;
+}
+#location{
+    width: 60%;
+    background-color: blanchedalmond;
+    margin: 1rem;
+}
+table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+table thead{
+    display: flex;
+    background-color: saddlebrown;
+    width: 100%;
+    justify-content: space-around;
+}
+table tbody {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+table tr{
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem;
+}

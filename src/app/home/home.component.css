@@ -1,0 +1,38 @@
+#login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 410px;
+
+}
+form h1{
+    font-size: 2rem;
+    color: rgb(72, 219, 72);
+    text-align: center;
+
+}
+form{
+  
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form label{
+    color: rgb(206, 66, 206);
+    font-size: large;
+    
+   /* border: 2px solid red;*/
+}
+
+#email-input, #password-input{
+    /*border: 2px solid red;*/
+ width: 60%;
+    margin: 8px;
+   
+}
+input{
+    width: 82%;
+}

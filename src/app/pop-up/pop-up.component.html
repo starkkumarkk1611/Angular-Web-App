@@ -1,0 +1,28 @@
+<nav>
+  <h2>All Tours Explorers</h2>
+  <button (click)="logout()">LOGOUT</button>
+</nav>
+<div class="d-flex justify-content-center">
+  <div class="spinner-border" role="status">
+      <span class="sr-only" id="loading">Loading...</span>
+</div>
+</div>
+<section>
+<div id="tour">
+    <h2>{{ tour.description }}</h2>
+    <img [src]="tour.courseListIcon" alt="">
+    <p>{{ tour.longDescription }}</p>
+</div>
+<form #toureditform="ngForm" class = "form-control"  (ngSubmit) = "onClickSubmit(toureditform.value)">
+  <h3>Change Description</h3>
+  <input type="text"  [(ngModel)]="tourchange.description" [value]="tourchange.description" name="description" required>
+  <h3>Change Category</h3>
+  <select name="category" [(ngModel)]="tourchange.category" required>
+    <option value="BEGINNER">BEGINNER</option>
+    <option value="ADVANCED">ADVANCED</option>
+  </select>
+  <h3>Change Description</h3>
+  <textarea type="textarea" cols="60" rows="4" name="longDescription" [(ngModel)]="tourchange.longDescription" [value]="tourchange.longDescription" required></textarea>
+  <button type="submit" [disabled]="toureditform.invalid">Save</button>
+</form>
+</section>
