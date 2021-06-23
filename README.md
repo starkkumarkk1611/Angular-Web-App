@@ -10,7 +10,7 @@ With the following command the angular-cli will be installed globally in your ma
 
 Install the master branch using the following commands:
 
-    git clone https://github.com/gic-amit/Angular-Exercise.git
+    git clone https://github.com/starkkumarkk1611/Angular-Web-App.git
     
 # How to install all dependencies
 
