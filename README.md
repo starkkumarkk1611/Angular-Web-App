@@ -35,8 +35,10 @@ The application is visible at port 4200: [http://localhost:4200](http://localhos
 # API endpoints
 
   * Get all tours: [GET] /api/tours 
-  * Get tour by ID: [GET] /api/tours/:id
-  * Get Destinations by tour Id: [GET] /api/locations/?locationId=:id
+  * Get tour by ID and Destination Location: [GET] /api/tours/:id
   * Update any tour: [PUT] /api/tours/:id
-  
+  * Making Login Request : [POST] /api/login
   * ':id' is a variable
+# Log In Credential in "server/db-data.ts" -> USERS
+  * Email : test@test.com
+  * Password : Test6201@
